@@ -94,15 +94,15 @@ int isOlder(char *dob1, char *dob2)
 				return 1;
 			else if (year2 < year1)
 				return 2;
-			else if (year1 == year2&&month1 < month2)
+			else if (month1 < month2)
 				return 1;
-			else if (year1 == year2&&month2 < month1)
+			else if (month2 < month1)
 				return 2;
-			else if (year1 == year2&&month1 == month2 && date1 < date2)
+			else if (date1 < date2)
 				return 1;
-			else if (year1 == year2&&month1 == month2&&date2 < date1)
+			else if (date2 < date1)
 				return 2;
-			else if (year1 == year2&&month1 == month2 && date1 == date2)
+			else
 				return 0;
 		}
 
